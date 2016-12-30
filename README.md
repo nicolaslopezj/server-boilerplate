@@ -3,6 +3,7 @@
 Installation
 
 ```sh
-yarn
-meteor
+$ yarn
+$ meteor npm install --save bcrypt
+$ meteor
 ```
