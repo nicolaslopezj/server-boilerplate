@@ -22,6 +22,9 @@ accounts-ui # To login before GraphiQL
 accounts-base
 accounts-password
 
+# Emails
+meteorhacks:ssr
+
 # GraphQL
 orionsoft:apollo
 orionsoft:graphql-compiler

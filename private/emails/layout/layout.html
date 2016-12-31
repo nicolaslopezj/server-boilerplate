@@ -1,0 +1,35 @@
+<html lang="es">
+  <head>
+    <meta charset="utf-8"> <!-- utf-8 works for most cases -->
+  	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+    <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    {{> styles }}
+  </head>
+  <body>
+    <div class="header">
+      <img class="logo" src="http://a3.mzstatic.com/us/r30/Purple/v4/ff/2c/a6/ff2ca682-6817-7654-0a0d-070a9eecead7/icon175x175.jpeg" alt="Logo" />
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        {{> Template.contentBlock }}
+        {{# if isProduction }}
+          <img src="{{ trackPixelUrl }}" height="1" width="1" />
+        {{/ if }}
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Si aún tienes dudas envíanos un email a <a href="mailto:mejorconlucas@consorcio.cl">mejorconlucas@consorcio.cl</a> o llamanos al <a href="tel:+56944254160">+56 9 4425 4160</a>
+      </p>
+      <p>
+        <a href="http://laumejorconlucas.cl">laumejorconlucas.cl</a>
+      </p>
+      {{> unsubscribe }}
+    </div>
+    <div style="text-align: right">
+      <img class="consorcio" src="http://i.imgur.com/NUhV4k7.png" alt="Consorcio" />
+    </div>
+  </body>
+</html>

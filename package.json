@@ -15,6 +15,8 @@
     "graphql": "^0.8.1",
     "graphql-server-express": "^0.4.3",
     "graphql-tools": "^0.8.1",
+    "juice": "^4.0.2",
+    "lodash": "^4.17.3",
     "meteor-node-stubs": "~0.2.0",
     "simpl-schema": "^0.0.4"
   },
