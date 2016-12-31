@@ -1,5 +1,8 @@
 accounts-base@1.2.14
 accounts-password@1.3.3
+accounts-ui@1.1.9
+accounts-ui-unstyled@1.1.12
+aldeed:collection2-core@2.0.0
 allow-deny@1.0.5
 autoupdate@1.2.11
 babel-compiler@6.13.0
@@ -34,6 +37,7 @@ htmljs@1.0.11
 http@1.2.9_1
 id-map@1.0.9
 jquery@1.11.10
+less@2.6.5
 livedata@1.0.18
 localstorage@1.0.12
 logging@1.1.16
@@ -57,13 +61,16 @@ ordered-dict@1.0.9
 orionsoft:apollo@0.0.4
 orionsoft:graphql-compiler@0.0.1
 promise@0.8.8
+raix:eventemitter@0.1.3
 random@1.0.10
 rate-limit@1.0.6
+reactive-dict@1.1.8
 reactive-var@1.0.11
 reload@1.1.11
 retry@1.0.9
 routepolicy@1.0.12
 service-configuration@1.0.11
+session@1.1.7
 sha@1.0.9
 shell-server@0.2.1
 spacebars@1.0.13

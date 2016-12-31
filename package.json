@@ -15,7 +15,8 @@
     "graphql": "^0.8.1",
     "graphql-server-express": "^0.4.3",
     "graphql-tools": "^0.8.1",
-    "meteor-node-stubs": "~0.2.0"
+    "meteor-node-stubs": "~0.2.0",
+    "simpl-schema": "^0.0.4"
   },
   "devDependencies": {
     "standard": "^8.5.0"
