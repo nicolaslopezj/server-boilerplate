@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "babel-plugin-transform-decorators-legacy",
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "api": "/server/imports"
+      }
+    }]
+  ]
+}

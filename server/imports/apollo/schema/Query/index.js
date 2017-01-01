@@ -1,5 +1,7 @@
+import User from './User'
+
 export default `
 type Query {
-  me: User
+  ${User}
 }
 `
