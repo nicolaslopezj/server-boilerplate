@@ -1,14 +1,7 @@
-import {Meteor} from 'meteor/meteor'
 import SimpleSchema from 'simpl-schema'
+import Profile from './Profile'
 
-const ProfileSchema = new SimpleSchema({
-  name: {
-    type: String,
-    optional: true
-  }
-})
-
-Meteor.users.attachSchema(new SimpleSchema({
+export default new SimpleSchema({
   emails: {
     type: Array
   },
@@ -26,7 +19,7 @@ Meteor.users.attachSchema(new SimpleSchema({
     type: Date
   },
   profile: {
-    type: ProfileSchema,
+    type: Profile,
     optional: true
   },
   services: {
@@ -46,6 +39,4 @@ Meteor.users.attachSchema(new SimpleSchema({
     type: Date,
     optional: true
   }
-}))
-
-export default Meteor.users
+})
