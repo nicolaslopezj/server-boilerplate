@@ -1,8 +1,15 @@
 type User {
   _id: ID!
+  email: String!
   profile: UserProfile
+  emails: [UserEmail]
 }
 
 type UserProfile {
   name: String
+}
+
+type UserEmail {
+  address: String!
+  verified: Boolean!
 }

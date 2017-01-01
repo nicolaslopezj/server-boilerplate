@@ -29,3 +29,6 @@ meteorhacks:ssr
 orionsoft:apollo
 orionsoft:graphql-compiler
 nicolaslopezj:apollo-accounts
+
+# Cron Jobs
+percolate:synced-cron
