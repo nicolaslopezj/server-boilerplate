@@ -15,6 +15,8 @@ const getEmailTemplate = function (template, user, url) {
     homeUrl: getURL('/')
   }
 
+  console.log(getContent(template, data), 'content')
+
   return getContent(template, data)
 }
 
