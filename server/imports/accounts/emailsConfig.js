@@ -1,5 +1,5 @@
 import {Accounts} from 'meteor/accounts-base'
-import getContent from '../emails/getContent'
+import getContent from 'api/emails/getContent'
 
 Accounts.emailTemplates.from = 'Orionsoft'
 Accounts.emailTemplates.siteName = 'Orionsoft'
