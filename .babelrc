@@ -3,9 +3,10 @@
     "transform-class-properties",
     "babel-plugin-transform-decorators-legacy",
     ["module-resolver", {
+      "cwd": "/",
       "root": ["./"],
       "alias": {
-        "api": "/server/imports"
+        "api": "./server/imports"
       }
     }]
   ]
