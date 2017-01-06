@@ -1,6 +1,6 @@
 import {Accounts} from 'meteor/accounts-base'
-import {Meteor} from 'meteor/meteor'
 import cloneDeep from 'lodash/cloneDeep'
+import Users from 'api/collections/Users'
 
 Accounts.onCreateUser(function (options, user = {}) {
   user.profile = options.profile || {}
@@ -21,8 +21,9 @@ Accounts.onCreateUser(function (options, user = {}) {
     user.emails = [{ address: user.services.facebook.email, verified: true }]
   }
 
-  var clone = cloneDeep(user)
-  Meteor.users.simpleSchema().validate(clone)
+  const clone = cloneDeep(user)
+  delete clone._id
+  Users.simpleSchema().validate(clone)
 
   return user
 })

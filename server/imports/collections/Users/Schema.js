@@ -20,7 +20,7 @@ export default new SimpleSchema({
   },
   profile: {
     type: Profile,
-    optional: true
+    defaultValue: {}
   },
   services: {
     type: Object,
