@@ -1,7 +1,5 @@
 import User from './User'
 
-export default `
-type Query {
-  ${User}
-}
-`
+export default [
+  User
+]

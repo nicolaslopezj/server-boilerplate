@@ -177,6 +177,10 @@ asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.npmjs.org/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
 
+autobind-decorator@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.npmjs.org/autobind-decorator/-/autobind-decorator-1.3.4.tgz#b67560e6bbbb68a35c049c82d6351ea0e82d820d"
+
 aws-sign2@~0.6.0:
   version "0.6.0"
   resolved "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz#14342dd38dbcc94d0e5b87d763cd63612c0e794f"
@@ -1217,6 +1221,13 @@ graceful-fs@^4.1.2:
   version "1.0.1"
   resolved "https://registry.npmjs.org/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+graphql-loader@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/graphql-loader/-/graphql-loader-1.0.0.tgz#13698b34d4ae61d761954834d4c6c7d5ebcd3eda"
+  dependencies:
+    autobind-decorator "^1.3.4"
+    lodash "^4.17.3"
+
 graphql-server-core@^0.4.3:
   version "0.4.3"
   resolved "https://registry.npmjs.org/graphql-server-core/-/graphql-server-core-0.4.3.tgz#3198832ce8703388713f012da023b33a3823be98"
@@ -1632,7 +1643,7 @@ lodash.unescape@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmjs.org/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
 
-lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.1:
+lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.3.0, lodash@^4.5.1:
   version "4.17.4"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 

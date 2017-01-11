@@ -52,7 +52,7 @@ modules@0.7.7
 modules-runtime@0.7.7
 mongo@1.1.14
 mongo-id@1.0.6
-nicolaslopezj:apollo-accounts@2.2.0
+nicolaslopezj:apollo-accounts@3.0.0
 nicolaslopezj:roles@2.6.3
 nooitaf:colors@1.1.2_1
 npm-bcrypt@0.9.2
