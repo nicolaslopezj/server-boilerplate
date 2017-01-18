@@ -17,6 +17,7 @@
     "juice": "^4.0.2",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "~0.2.0",
+    "paginated-graphql": "^1.0.2",
     "simpl-schema": "^0.0.4"
   },
   "devDependencies": {

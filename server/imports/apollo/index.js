@@ -5,6 +5,7 @@ import {initAccounts} from 'meteor/nicolaslopezj:apollo-accounts'
 import cors from 'cors'
 import typeDefs from './schema'
 import resolvers from './resolvers'
+import 'paginated-graphql'
 
 // Load all accounts related resolvers and type definitions into graphql-loader
 initAccounts({})
