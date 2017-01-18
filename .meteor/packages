@@ -17,6 +17,7 @@ shell-server@0.2.1            # Server-side component of the `meteor shell` comm
 # Schema
 aldeed:collection2-core@2.0.0
 aldeed:schema-index
+matb33:collection-hooks
 
 # Accounts
 accounts-ui # To login before GraphiQL
