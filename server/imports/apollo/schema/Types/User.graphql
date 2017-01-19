@@ -1,8 +1,13 @@
 type User {
   _id: ID!
+  # The first user email
   email: String!
+  # User profile
   profile: UserProfile
+  # List of emails that the user has
   emails: [UserEmail]
+  # The name of the roles the user has
+  roles: [ID]
 }
 
 type UserProfile {
