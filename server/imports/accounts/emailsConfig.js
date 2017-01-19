@@ -5,7 +5,7 @@ Accounts.emailTemplates.from = 'Orionsoft'
 Accounts.emailTemplates.siteName = 'Orionsoft'
 
 const getURL = function (path) {
-  return `http://localhost:3000${path}`
+  return `http://localhost:3010${path}`
 }
 
 const getEmailTemplate = function (template, user, url) {
