@@ -1228,6 +1228,13 @@ graphql-loader@^1.0.0:
     autobind-decorator "^1.3.4"
     lodash "^4.17.3"
 
+graphql-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/graphql-loader/-/graphql-loader-1.0.1.tgz#16b6bcf64e9742bd70d7c89f6974e92ebe7e27d9"
+  dependencies:
+    autobind-decorator "^1.3.4"
+    lodash "^4.17.3"
+
 graphql-server-core@^0.4.3:
   version "0.4.3"
   resolved "https://registry.npmjs.org/graphql-server-core/-/graphql-server-core-0.4.3.tgz#3198832ce8703388713f012da023b33a3823be98"
@@ -1837,6 +1844,10 @@ object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
   resolved "https://registry.npmjs.org/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
+object-hash@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.npmjs.org/object-hash/-/object-hash-1.1.5.tgz#bdd844e030d0861b692ca175c6cab6868ec233d7"
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"
@@ -1882,6 +1893,14 @@ os-homedir@^1.0.0:
 os-tmpdir@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
+
+paginated-graphql@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/paginated-graphql/-/paginated-graphql-1.0.2.tgz#32ebceb2b8d69214f640060f5fe36937ec0afc81"
+  dependencies:
+    graphql-loader "^1.0.1"
+    lodash "^4.17.3"
+    object-hash "^1.1.5"
 
 pako@~0.2.0:
   version "0.2.9"

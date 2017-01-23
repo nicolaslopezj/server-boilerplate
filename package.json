@@ -9,6 +9,7 @@
     "bcrypt": "^1.0.2",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
+    "crypto": "^0.0.3",
     "express": "^4.14.0",
     "graphql": "^0.8.1",
     "graphql-loader": "^1.0.0",
@@ -17,6 +18,7 @@
     "juice": "^4.0.2",
     "lodash": "^4.17.4",
     "meteor-node-stubs": "~0.2.0",
+    "object-path": "^0.11.3",
     "paginated-graphql": "^1.0.2",
     "simpl-schema": "^0.0.4"
   },
