@@ -1,11 +1,12 @@
 import {Accounts} from 'meteor/accounts-base'
 import getContent from 'api/emails/getContent'
 
-Accounts.emailTemplates.from = 'Orionsoft'
+const isProduction = process.env.NODE_ENV === 'production'
+Accounts.emailTemplates.from = process.env.MAIL_FROM || 'test@orionsoft.io'
 Accounts.emailTemplates.siteName = 'Orionsoft'
 
 const getURL = function (path) {
-  return `http://localhost:3010${path}`
+  return isProduction ? `http://admin.orionsoft.io${path}` : `http://localhost:3010${path}`
 }
 
 const getEmailTemplate = function (template, user, url) {

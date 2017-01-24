@@ -3,13 +3,13 @@ import {Meteor} from 'meteor/meteor'
 import {Email} from 'meteor/email'
 
 const isProduction = process.env.NODE_ENV === 'production'
-const from = 'test@orionsoft.io' // send emails from
+const from = process.env.MAIL_FROM || 'test@orionsoft.io' // send emails from
 
 const sendEmail = function ({user, subject, template, data, receiver}) {
   const html = getContent(template, {...data, user})
   let to = receiver
   if (!isProduction) {
-    to = receiver
+    to = 'test@orionsoft.io' // bypass email
     console.log(`Sending testing email to: "${to}"...`)
     console.log(`with: "${data}"...`)
   }
