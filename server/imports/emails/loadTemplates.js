@@ -1,5 +1,6 @@
 const templates = [
   // load other templates here
+  'welcome'
 ]
 
 templates.forEach(template => {
