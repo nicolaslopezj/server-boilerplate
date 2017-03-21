@@ -1,11 +1,16 @@
 import {Kind} from 'graphql/language'
+import isNumber from 'lodash/isNumber'
 
 export default {
   __parseValue (value) {
     return new Date(value) // value from the client
   },
   __serialize (value) {
-    return value.getTime() // value sent to the client
+    if (isNumber(value)) {
+      return value
+    } else {
+      return value.getTime() // value sent to the client
+    }
   },
   __parseLiteral (ast) {
     switch (ast.kind) {
