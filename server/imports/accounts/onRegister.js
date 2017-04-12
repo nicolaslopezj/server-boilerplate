@@ -1,6 +1,7 @@
 import {Accounts} from 'meteor/accounts-base'
 import cloneDeep from 'lodash/cloneDeep'
 import Users from 'api/collections/Users'
+import {Meteor} from 'meteor/meteor'
 
 Accounts.onCreateUser(function (options, user = {}) {
   user.profile = options.profile || {}
@@ -24,6 +25,10 @@ Accounts.onCreateUser(function (options, user = {}) {
   const clone = cloneDeep(user)
   delete clone._id
   Users.simpleSchema().validate(clone)
+  
+  Meteor.setTimeout(() => {
+    Accounts.sendVerificationEmail(user._id)
+  })
 
   return user
 })
