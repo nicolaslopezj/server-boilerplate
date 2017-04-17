@@ -7,13 +7,14 @@ const from = process.env.MAIL_FROM || 'test@orionsoft.io' // send emails from
 
 const sendEmail = function ({sync, to, subject, template, data}) {
   const html = getContent(template, data)
-  const email = {to, from, subject, html}
 
   if (!isProduction) {
     to = 'test@orionsoft.io'
     console.log(`Sending testing email to: "${to}"...`)
     console.log(`with: "${data}"...`)
   }
+  
+  const email = {to, from, subject, html}
 
   try {
     if (sync) {
