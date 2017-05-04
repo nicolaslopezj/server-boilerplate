@@ -1,34 +1,45 @@
-import {Accounts} from 'meteor/accounts-base'
-import cloneDeep from 'lodash/cloneDeep'
-import Users from 'api/collections/Users'
+import getContent from './getContent'
 import {Meteor} from 'meteor/meteor'
+import {Email} from 'meteor/email'
 
-Accounts.onCreateUser(function (options, user = {}) {
-  user.profile = options.profile || {}
+const isProduction = process.env.NODE_ENV === 'production'
+const from = process.env.MAIL_FROM || 'test@orionsoft.io' // send emails from
 
-  if (user.services.google) {
-    user.profile = {
-      name: user.services.google.name,
-      image: { url: user.services.google.picture, fileId: '1' }
-    }
-    user.emails = [{ address: user.services.google.email, verified: true }]
+const sendEmail = function ({to, subject, template, data}) {
+  const html = getContent(template, data)
+
+  if (!isProduction) {
+    const oldTo = to
+    to = 'nicolas@orionsoft.io'
+    console.log(`Sending testing email to "${to}" instead if "${oldTo}..."`)
   }
 
-  if (user.services.facebook) {
-    user.profile = {
-      name: user.services.facebook.name,
-      image: { url: 'https://graph.facebook.com/' + user.services.facebook.id + '/picture?type=large', fileId: '1' }
-    }
-    user.emails = [{ address: user.services.facebook.email, verified: true }]
+  const email = {to, from, subject, html}
+
+  try {
+    Email.send(email)
+  } catch (error) {
+    console.log(`Error sending email to ${to}`, error)
+  }
+}
+
+const send = async function ({usersIds, subject, template, data, addresses}) {
+  if (usersIds) {
+    Meteor.users.find({_id: {$in: usersIds}}).forEach(user => {
+      const finalData = {...data, user}
+      const to = user.emails[0].address
+      sendEmail({to, subject, template, data: finalData})
+    })
   }
 
-  const clone = cloneDeep(user)
-  delete clone._id
-  Users.simpleSchema().validate(clone)
-  
-  Meteor.setTimeout(() => {
-    Accounts.sendVerificationEmail(user._id)
-  })
+  if (addresses) {
+    addresses.map(to => {
+      console.log(`Sending email to ${to}...`)
+      sendEmail({to, subject, template, data})
+    })
+  }
+}
 
-  return user
-})
+global.sendEmail = send
+
+export default send
