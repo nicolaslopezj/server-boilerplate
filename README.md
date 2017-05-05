@@ -10,3 +10,6 @@ $ yarn
 $ meteor npm install --save bcrypt
 $ meteor
 ```
+
+
+> Project sponsored by [Orion Hosting](https://orion.hosting/?utm_source=github-server-boilerplate) - Hosting for Meteor
