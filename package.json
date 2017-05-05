@@ -5,27 +5,27 @@
     "test": "standard"
   },
   "dependencies": {
-    "babel-runtime": "^6.20.0",
+    "babel-runtime": "^6.23.0",
     "bcrypt": "^1.0.2",
-    "body-parser": "^1.15.2",
-    "cors": "^2.8.1",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "crypto": "^0.0.3",
-    "express": "^4.14.0",
-    "graphql": "^0.8.1",
-    "graphql-loader": "^1.0.0",
-    "graphql-server-express": "^0.4.3",
-    "graphql-tools": "^0.9.0",
+    "express": "^4.15.2",
+    "graphql": "^0.9.6",
+    "graphql-loader": "^1.2.1",
+    "graphql-server-express": "^0.7.2",
+    "graphql-tools": "^0.11.0",
     "juice": "^4.0.2",
     "lodash": "^4.17.4",
-    "meteor-node-stubs": "~0.2.0",
-    "object-path": "^0.11.3",
-    "paginated-graphql": "^1.0.2",
-    "simpl-schema": "^0.0.4"
+    "meteor-node-stubs": "^0.2.6",
+    "object-path": "^0.11.4",
+    "paginated-graphql": "^1.1.3",
+    "simpl-schema": "^0.3.0"
   },
   "devDependencies": {
-    "babel-plugin-module-resolver": "^2.4.0",
-    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "standard": "^8.5.0"
+    "standard": "^10.0.2"
   }
 }
