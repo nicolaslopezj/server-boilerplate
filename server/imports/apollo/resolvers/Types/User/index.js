@@ -1,7 +1,5 @@
+import email from './email'
+
 export default {
-  User: {
-    email (user) {
-      return user.emails[0].address
-    }
-  }
+  email
 }

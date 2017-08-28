@@ -12,6 +12,12 @@ type User {
 
 type UserProfile {
   name: String
+  phone: String
+}
+
+input UserProfileInput {
+  name: String
+  phone: String
 }
 
 type UserEmail {

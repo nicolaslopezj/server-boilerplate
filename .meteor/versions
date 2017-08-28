@@ -69,7 +69,7 @@ oauth2@1.1.11
 observe-sequence@1.0.16
 ordered-dict@1.0.9
 orionsoft:apollo@0.1.2
-orionsoft:apollo-helpers@0.0.1
+orionsoft:apollo-helpers@0.1.0
 orionsoft:graphql-compiler@0.0.2
 percolate:synced-cron@1.3.2
 promise@0.8.9
