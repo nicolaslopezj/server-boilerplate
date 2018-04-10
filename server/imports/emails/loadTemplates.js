@@ -1,19 +1,4 @@
-const templates = [
-  // load other templates here
-  'welcome'
-]
-
-templates.forEach(template => {
-  const assetPath = `emails/templates/${template}.html`
-  // eslint-disable-next-line
-  SSR.compileTemplate(template, Assets.getText(assetPath))
-})
-
-const auths = [
-  'enroll',
-  'reset',
-  'verify'
-]
+const auths = ['enroll', 'reset', 'verify']
 
 auths.forEach(template => {
   const assetPath = `emails/auth/${template}.html`
@@ -21,12 +6,7 @@ auths.forEach(template => {
   SSR.compileTemplate(`auth_${template}`, Assets.getText(assetPath))
 })
 
-const layouts = [
-  'button',
-  'layout',
-  'unsubscribe',
-  'styles'
-]
+const layouts = ['button', 'layout', 'unsubscribe', 'styles']
 
 layouts.forEach(template => {
   const assetPath = `emails/layout/${template}.html`

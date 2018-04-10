@@ -5,7 +5,7 @@ import {Email} from 'meteor/email'
 const isProduction = process.env.NODE_ENV === 'production'
 const from = process.env.MAIL_FROM || 'test@orionsoft.io' // send emails from
 
-const sendEmail = function ({to, subject, template, data}) {
+const sendEmail = function({to, subject, template, data}) {
   const html = getContent(template, data)
 
   if (!isProduction) {
@@ -23,15 +23,18 @@ const sendEmail = function ({to, subject, template, data}) {
   }
 }
 
-export default async function ({usersIds, subject, template, data, addresses}) {
-  Meteor.users.find({_id: {$in: usersIds}}).forEach(user => {
-    const finalData = {...data, user}
-    const to = user.emails[0].address
-    sendEmail({to, subject, template, data: finalData})
-  })
+export default async function({usersIds, subject, template, data, addresses}) {
+  if (usersIds) {
+    Meteor.users.find({_id: {$in: usersIds}}).forEach(user => {
+      const finalData = {...data, user}
+      const to = user.emails[0].address
+      sendEmail({to, subject, template, data: finalData})
+    })
+  }
 
-  if (!addresses) return
-  addresses.map(to => {
-    sendEmail({to, subject, template, data})
-  })
+  if (addresses) {
+    addresses.map(to => {
+      sendEmail({to, subject, template, data})
+    })
+  }
 }
