@@ -25,7 +25,7 @@ Accounts.emailTemplates.verifyEmail.subject = function(user) {
 }
 
 Accounts.emailTemplates.verifyEmail.html = function(user, url) {
-  return getEmailTemplate('auth_verify', user, url)
+  return getEmailTemplate('verify', user, url)
 }
 
 Accounts.urls.verifyEmail = function(token) {
@@ -37,7 +37,7 @@ Accounts.emailTemplates.resetPassword.subject = function(user) {
 }
 
 Accounts.emailTemplates.resetPassword.html = function(user, url) {
-  return getEmailTemplate('auth_reset', user, url)
+  return getEmailTemplate('reset', user, url)
 }
 
 Accounts.urls.resetPassword = function(token) {
@@ -49,7 +49,7 @@ Accounts.emailTemplates.enrollAccount.subject = function(user) {
 }
 
 Accounts.emailTemplates.enrollAccount.html = function(user, url) {
-  return getEmailTemplate('auth_enroll', user, url)
+  return getEmailTemplate('enroll', user, url)
 }
 
 Accounts.urls.enrollAccount = function(token) {
