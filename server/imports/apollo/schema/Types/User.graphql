@@ -2,6 +2,8 @@ type User {
   _id: ID!
   # The first user email
   email: String!
+  # The name of the User
+  name: String
   # User profile
   profile: UserProfile
   # List of emails that the user has
